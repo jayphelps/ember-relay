@@ -26,7 +26,7 @@ App.Profile = Ember.Object.extend({
         var self = this;
 
         this.findUser(1234).then(function (user) {
-            self.findTweets(user.get('email')).then(function (tweets) {
+            self.findTweets(user).then(function (tweets) {
                 self.displayTweets(tweets);
             });
         });
