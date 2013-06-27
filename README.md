@@ -23,9 +23,11 @@ App.Profile = Ember.Object.extend({
 
     // Example WITHOUT Relay
     withoutRelay: function () {
-        App.User.find(1234).then(function (user) {
-            App.TweetsByEmail.find(user.get('email')).then(function (tweets) {
-                // Do something with the tweets
+        var self = this;
+
+        this.findUser(1234).then(function (user) {
+            self.findTweets(user.get('email')).then(function (tweets) {
+                self.displayTweets(tweets);
             });
         });
     },
