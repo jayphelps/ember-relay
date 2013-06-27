@@ -11,7 +11,7 @@ App.Profile = Ember.Object.extend({
     // Example using Relay.
     // This code is deceptively simple. Even though we wrote the code as if
     // these calls are synchronous, in reality, Relay knows you can't find the
-    // tweets until the User has been loaded.
+    // tweets until the User has been loaded because you told it so!
     usingRelay: function () {
         var relay = Relay.create(this);
 
@@ -19,6 +19,8 @@ App.Profile = Ember.Object.extend({
         var tweets = relay.findTweets(user);
 
         relay.displayTweets(tweets);
+        
+        // Do something else while they're all loading
     },
 
     // Example WITHOUT Relay
@@ -30,6 +32,8 @@ App.Profile = Ember.Object.extend({
                 self.displayTweets(tweets);
             });
         });
+        
+        // Do something else while they're all loading
     },
 
     findUser: function (userId) {
@@ -45,3 +49,11 @@ App.Profile = Ember.Object.extend({
     }
 });
 ```
+
+Under the hood, Relay wraps your methods and keeps track of the arguments you pass, calling the real implementation only after all dependencies (promises) are resolved.
+
+###Why?
+Because I'm working on an app that uses lots of promises that depend on eachother and I'm tired of writing .then(closure).then(closure) etc. I'm also semi-anal about methods vs. spaghetti closures.
+
+###License
+MIT Licensed
