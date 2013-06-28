@@ -11,7 +11,8 @@ App.Profile = Ember.Object.extend({
     // Example using Relay.
     // This code is deceptively simple. Even though we wrote the code as if
     // these calls are synchronous, in reality, Relay knows you can't find the
-    // tweets until the User has been loaded because you told it so!
+    // tweets until the User has been loaded because you told it so. Just as
+    // you can't display those tweets until they are ready.
     usingRelay: function () {
         var relay = Relay.create(this);
 
