@@ -58,3 +58,6 @@ Because I'm working on an app that uses lots of promises that depend on eachothe
 
 ###License
 MIT Licensed
+
+###Future
+In the future I plan to make this work with anything that is Promises/A compliant, not just Ember.
