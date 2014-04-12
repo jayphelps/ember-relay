@@ -1,6 +1,8 @@
 ember-relay
 ===========
 
+**Note: This project is not maintained right now as I think ES6 generators and `yield` are a better solution**
+
 That whole `Promises` thing without even paying attention.
 
 Makes Promises ***act*** like they're synchronous.
