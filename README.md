@@ -1,7 +1,7 @@
 ember-relay
 ===========
 
-**Note: This project is not maintained right now as I think ES6 generators and `yield` are a better solution**
+**Note: This project is not maintained right now as I think ES6 `await` or generators and `yield` are a better solutions**
 
 That whole `Promises` thing without even paying attention.
 
