@@ -1,7 +1,7 @@
 ember-relay
 ===========
 
-**Note: This project is not maintained right now as I think ES6 generators + `yield are better; or even better [ES7 `async`/`await](https://github.com/lukehoban/ecmascript-asyncawait)`**
+**Note: This project is not maintained right now as I think ES6 generators + `yield` are better; or even better [ES7 `async`/`await](https://github.com/lukehoban/ecmascript-asyncawait)`**
 
 That whole `Promises` thing without even paying attention.
 
